@@ -1,0 +1,36 @@
+# APLICAÇÃO PARA VISUALIZAÇÃO EM GRÁFICO DE LINHAS SOBRE O USO DO PROCESSAMENTO DOS SUPERCOMPUTADORES EGEON E XC50
+# 
+# Desenvolvido pela equipe COIDS/WEB em 12/2023
+
+Desenvolvido utilizando as versões de Python e PIP:
+- Python 3.8.10
+- Pip 20.0.2
+
+-----------------------------------------------------
+Versões de bibliotecas:
+- Vide requirements.txt
+
+Porta: 5003 # Podendo ser alterada no final do arquivo app.py
+
+Rotas: app.py
+
+Comunicação com BD e Funções Search: connections.py
+
+Layout HTML Localizados em: templates/
+
+Função para gerar os gráficos: graph.py
+
+Configuração do Banco de Dados: .env
+
+------------------------------------------------------
+-------------- COMO SUBIR O AMBIENTE -----------------
+------------------------------------------------------
+
+Para Preparação do Ambiente, instale as bibliotecas:
+- pip install -r requirements.txt
+
+Com base no arquivo 'env_EXAMPLE':
+- crie o arquivo '.env' editando as configurações de acordo com o BD
+
+Execução da api:
+- python3 app.py

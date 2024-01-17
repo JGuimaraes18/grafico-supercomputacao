@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados Supercomputação</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        function exibirGrafico(dias) {
+            console.log('Botão clicado para', dias, 'dias'); // Verifica se a função está sendo chamada
+
+            // Use JavaScript para enviar uma requisição ao servidor com a opção selecionada
+            fetch('/atualizar-grafico?dias=' + dias)
+                .then(response => response.text())
+                .then(grafico => {
+                    // Atualiza o conteúdo da div com o novo gráfico
+                    document.getElementById('graficoEgeon').innerHTML = grafico;
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Consumo Supercomputação</h2>
+    <button onclick="exibirGrafico(7)">Últimos 7 Dias</button>
+    <button onclick="exibirGrafico(15)">Últimos 15 Dias</button>
+    <button onclick="exibirGrafico(30)">Últimos 30 Dias</button>
+    <div id="graficoEgeon">{{ graficoEgeon|safe }}</div>
+    <div id="graficoXC50">{{ graficoXC50|safe }}</div>
+</body>
+</html>
